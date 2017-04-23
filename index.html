@@ -4,62 +4,75 @@
     <meta charset="utf-8">
     <title>Colmar Academy</title>
     <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto+Slab:700" rel="stylesheet">
     <link href="resources/css/reset.css" type="text/css" rel="stylesheet">
     <link href="resources/css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     <header>
-      <div class="brand container">
-        <div class="logo flex container">
-          <img src="resources/images/ic-logo.svg" alt="colmar-academy-logo">
-          <span class="full-brand">COLMAR</span>ACADEMY
-        </div>
-      <!-- Navigation -->
-        <div class="navigation">
-          <nav>
+      <div class="container flex">
+          <div class="logo desktop">
+            <img src="resources/images/ic-logo.svg" alt="colmar-academy-logo" />
+            <span class="logotype"><em>Colmar</em>Academy</span>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="desktop">
             <ul>
               <li><a href="#">On Campus</a></li>
               <li><a href="#">Online</a></li>
               <li><a href="#">For companies</a></li>
-              <li><a href="#">Sign in</a></li>
+              <li><a class="sign-in" href="#">Sign in</a></li>
             </ul>
           </nav>
-          <nav class="mobile-nav">
+
+          <!-- Mobile Nav -->
+          <nav class="mobile">
             <ul>
+              <li><a href="#"><img src="resources/images/ic-logo.svg" alt="colmar-academy-logo" /></a></li>
               <li><a href="#"><img src="resources/images/ic-on-campus.svg"></a></li>
               <li><a href="#"><img src="resources/images/ic-online.svg"></a></li>
               <li><a href="#"><img src="resources/images/ic-login.svg"></a></li>
             </ul>
           </nav>
         </div>
-      </div>
-
-      <!-- Main Banner -->
-      <div class="main flex container">
-        <div class=" banner banner-content">
-          <h1>Learn Something New Everyday</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          <button>Start here</button>
-        </div>
-      </div>
     </header>
 
-    <section>
-      <!-- Blog Posts -->
-      <div class="blog flex container">
-        <!-- Post Feature -->
-        <div class="blog-feature">
-          <img src="resources/images/information-main.jpg" alt="student reading a book">
-          <h2>It doesn't hurt to keep practicing</h2>
-          <p>Halvah biscuit ice cream cheesecake dessert. Donut cheesecake toffee sugar plum croissant wafer tiramisu tiramisu. Pastry marshmallow wafer oat cake chupa chups. Bonbon liquorice chupa chups muffin.</p>
-          <span class="author">Emanuel, Sr Strategist at Hiring.com</span>
+    <!-- Main Content -->
+    <section id="banner">
+      <div class="container flex">
+        <div class="main">
+          <img src="resources/images/banner.jpg" alt="Students studying at picnic table"/>
         </div>
-        <!-- Post Sidebar -->
-        <div class="blog-sidebar">
+        <div class="callout">
+          <div>
+            <h1>Learn Something New Everyday</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a class="button" href="#">Start here</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Individual Post -->
-          <div class="post container">
-            <img src="resources/images/information-orientation.jpg" alt="students walking through campus">
+      <!-- Blog Posts -->
+    <section id="blogs">
+      <div class="blogs container flex">
+        <!-- Post main -->
+        <div class="main">
+          <img src="resources/images/information-main.jpg" alt="student reading a book">
+          <div class="main-content">
+            <h2>It doesn't hurt to keep practicing</h2>
+            <p>"Halvah biscuit ice cream cheesecake dessert. Donut cheesecake toffee sugar plum croissant wafer tiramisu tiramisu. Pastry marshmallow wafer oat cake chupa chups. Bonbon liquorice chupa chups muffin."</p>
+            <p class="author">Emanuel, Sr Strategist at Hiring.com</p>
+          </div>
+        </div>
+
+        <!-- Post Sidebar -->
+        <div class="sidebar">
+          <!-- 1st Individual Post -->
+          <div class="post">
+              <img class="desktop" src="resources/images/information-orientation.jpg" alt="students walking through campus">
+              <img class="mobile" src="resources/images/information-orientation-mobile.jpg" alt="students walking through campus">
             <div class="post-content">
               <h3>Orientation date</h3>
               <p>Tue 10/11 &amp; Wed 10/12: 8am-3pm</p>
@@ -67,9 +80,10 @@
             </div>
           </div>
 
-          <!-- Individual Post -->
-          <div class="post container">
-            <img src="resources/images/information-campus.jpg" alt="students walking through campus">
+          <!-- 2nd Individual Post -->
+          <div class="post">
+              <img class="desktop" src="resources/images/information-campus.jpg" alt="students at table studying">
+              <img class="mobile" src="resources/images/information-campus-mobile.jpg" alt="students at table studying">
             <div class="post-content">
               <h3>Our campus</h3>
               <p>Find which campus is close by you</p>
@@ -77,103 +91,154 @@
             </div>
           </div>
 
-          <!-- Individual Post -->
-          <div class="post container">
-            <img src="resources/images/information-guest-lecture.jpg" alt="students walking through campus">
+          <!-- 3rd Individual Post -->
+          <div class="post">
+              <img class="desktop" src="resources/images/information-guest-lecture.jpg" alt="guest lecturer portrait">
+              <img class="mobile" src="resources/images/information-guest-lecture-mobile.jpg" alt="guest lecturer portrait">
             <div class="post-content">
               <h3>Our guest lecture</h3>
               <p>Join a keynote with Oliver Sack about music in medical treatment</p>
               <a href="#">Read more</a>
             </div>
           </div>
+
         </div>
       </div>
+    </section>
 
       <!-- Courses -->
-      <div class="courses flex container">
-        <h2>Start Learning</h2>
+    <section id="courses">
+      <div class="container">
+        <h1>Start Learning</h1>
+        <div class="flex">
 
-        <!-- Course Card 1 -->
-        <div class="course">
-          <img src="resources/images/course-software.jpg" alt="">
-          <h4>Software engineering</h4>
-          <p class="category">Courses</p>
-          <p>Web Development, Mobile Development, iOT, APIs</p>
-        </div>
-        <!-- Course Card 2 -->
-        <div class="course">
-          <img src="resources/images/course-computer-art.jpg" alt="">
-          <h4>Computer art</h4>
-          <p class="category">Courses</p>
-          <p>Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computuer Animation</p>
-        </div>
-        <!-- Course Card 3 -->
-        <div class="course">
-          <img src="resources/images/course-design.jpg" alt="">
-          <h4>Design</h4>
-          <p class="category">Courses</p>
-          <p>User Experience Design, User Research, Visual Design</p>
-        </div>
-        <!-- Course Card 4 -->
-        <div class="course">
-          <img src="resources/images/course-data.jpg" alt="">
-          <h4>Data</h4>
-          <p class="category">Courses</p>
-          <p>Data Science, Big Data, SQL, Data Visualization</p>
-        </div>
-        <!-- Course Card 5 -->
-        <div class="course">
-          <img src="resources/images/course-business.jpg" alt="">
-          <h4>Business</h4>
-          <p class="category">Courses</p>
-          <p>Product Development, Business Development, Startup</p>
-        </div>
-        <!-- Course Card 6 -->
-        <div class="course">
-          <img src="resources/images/course-marketing.jpg" alt="">
-          <h4>Marketing</h4>
-          <p class="category">Courses</p>
-          <p>Analytics, Content Marketing, Mobile Marketing</p>
-        </div>
-
-      </div>
-
-      <!-- Thesis Exhibit -->
-      <div class="thesis flex container">
-        <!-- Post Feature -->
-        <div class="blog-feature">
-          <video src="https://www.youtube.com/embed/zB4I68XVPzQ" autoplay poster="posterimage.jpg"></video>
-          <h4>Reimagine urban</h4>
-          <p>Halvah biscuit ice cream cheesecake dessert. Donut cheesecake toffee sugar plum croissant wafer tiramisu tiramisu. Pastry marshmallow wafer oat cake chupa chups. Bonbon liquorice chupa chups muffin.</p>
-          <span class="author">Emanuel, Sr Strategist at Hiring.com</span>
-        </div>
-        <!-- Post Sidebar -->
-        <div class="blog-sidebar">
-
-          <!-- Individual Post -->
-          <div class="post container">
-            <img src="resources/images/thesis-fisma.jpg" alt="students walking through campus">
-            <div class="post-content">
-              <h3>Fisma: Design and </h3>
-              <p>Designer showcase of new prototype product</p>
+          <!-- Course Card 1 -->
+          <div class="course desktop">
+            <img src="resources/images/course-software.jpg" alt="">
+            <div class="course-content">
+              <h4>Software engineering</h4>
+              <p class="category">Courses</p>
+              <p>Web Development, Mobile Development, iOT, APIs</p>
             </div>
           </div>
 
-          <!-- Individual Post -->
-          <div class="post container">
-            <img src="resources/images/thesis-now-and-then.jpg" alt="students walking through campus">
-            <div class="post-content">
-              <h3>Now and then</h3>
-              <p>Research study about New York</p>
+          <!-- Course Card 2 -->
+          <div class="course desktop">
+            <img src="resources/images/course-computer-art.jpg" alt="">
+            <div class="course-content">
+              <h4>Computer art</h4>
+              <p class="category">Courses</p>
+              <p>Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computuer Animation</p>
             </div>
           </div>
+
+          <!-- Course Card 3 -->
+          <div class="course desktop">
+            <img src="resources/images/course-design.jpg" alt="">
+            <div class="course-content">
+              <h4>Design</h4>
+              <p class="category">Courses</p>
+              <p>User Experience Design, User Research, Visual Design</p>
+            </div>
+          </div>
+
+          <!-- Course Card 4 -->
+          <div class="course desktop">
+            <img src="resources/images/course-data.jpg" alt="">
+            <div class="course-content">
+              <h4>Data</h4>
+              <p class="category">Courses</p>
+              <p>Data Science, Big Data, SQL, Data Visualization</p>
+            </div>
+          </div>
+
+          <!-- Course Card 5 -->
+          <div class="course desktop">
+            <img src="resources/images/course-business.jpg" alt="">
+            <div class="course-content">
+              <h4>Business</h4>
+              <p class="category">Courses</p>
+              <p>Product Development, Business Development, Startup</p>
+            </div>
+          </div>
+
+          <!-- Course Card 6 -->
+          <div class="course desktop">
+            <img src="resources/images/course-marketing.jpg" alt="">
+            <div class="course-content">
+              <h4>Marketing</h4>
+              <p class="category">Courses</p>
+              <p>Analytics, Content Marketing, Mobile Marketing</p>
+            </div>
+          </div>
+
+          <!-- Mobile Course Cards -->
+            <ul class="course-list mobile">
+              <li><h4>Software engineering</h4></li>
+              <li><h4>Computer art</h4></li>
+              <li><h4>Design</h4></li>
+              <li><h4>Data</h4></li>
+              <li><h4>Business</h4></li>
+              <li><h4>Marketing</h4></li>
+            </ul>
+
         </div>
       </div>
+    </section>
 
+    <!-- Thesis Exhibit -->
+    <section id="thesis">
+      <div class="container">
+        <h1>Thesis Exhibit</h1>
+
+        <div class="flex">
+          <!-- Post main -->
+          <div class="main">
+            <video loop src="resources/videos/thesis.mp4" autoplay poster="posterimage.jpg"></video>
+            <div class="main-content desktop">
+              <h2>Reimagine urban</h2>
+              <p>Halvah biscuit ice cream cheesecake dessert. Donut cheesecake toffee sugar plum croissant wafer tiramisu tiramisu. Pastry marshmallow wafer oat cake chupa chups. Bonbon liquorice chupa chups muffin.</p>
+            </div>
+          </div>
+
+          <!-- Post Sidebar -->
+          <div class="sidebar desktop">
+            <!-- 1st Individual Post -->
+            <div class="post">
+              <img src="resources/images/thesis-fisma.jpg" alt="workspace">
+              <div class="post-content">
+                <h4>Fisma: Design and </h4>
+                <p>Designer showcase of new prototype product</p>
+              </div>
+            </div>
+
+            <!-- 2nd Individual Post -->
+            <div class="post">
+              <img class="desktop" src="resources/images/thesis-now-and-then.jpg" alt="New York City skyline">
+              <div class="post-content">
+                <h4>Now and then</h4>
+                <p>Research study about New York</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Sidebar -->
+
+        </div>
+      </div>
     </section>
 
     <footer>
-      <span>© 2016 Colmar Academy. All rights reserved.</span>
+      <div class="container flex">
+        <div>
+          <span>© 2016 Colmar Academy. All rights reserved.</span>
+        </div>
+        <div>
+          <ul class="desktop">
+            <li>Terms</li>
+            <li>Privacy</li>
+          </ul>
+        </div>
+      </div>
     </footer>
 
   </body>
